@@ -127,7 +127,22 @@ namespace BlazorApp.Server.Controllers
             var dbJudge = Judges.FirstOrDefault(j => j.Id == id);
             if (dbJudge == null)
                 return NotFound("Judge was not found.");
-            dbJudge = judge;
+
+            var index = Judges.IndexOf(dbJudge);
+            Judges[index] = judge;
+            
+            return Ok(Judges);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteJudge(int id)
+        {
+            var dbJudge = Judges.FirstOrDefault(j => j.Id == id);
+            if (dbJudge == null)
+                return NotFound("Judge was not found.");
+
+            Judges.Remove(dbJudge);
+
             return Ok(Judges);
         }
     }

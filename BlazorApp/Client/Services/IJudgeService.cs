@@ -13,5 +13,6 @@ namespace BlazorApp.Client.Services
         Task<Judge> GetJudge(int id);
         Task<List<Judge>> CreateJudge(Judge judge);
         Task<List<Judge>> ReplaceJudge(Judge judge, int id);
+        Task<List<Judge>> DeleteJudge(int id);
     }
 }

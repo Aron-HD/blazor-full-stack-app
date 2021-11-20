@@ -33,8 +33,9 @@ else
                         <td>@judge.Company</td>
                         @*<td>@judge.Email</td>*@
                         <td>
-                            <button class="btn btn-sm btn-warning" @onclick="(() => ShowHero(judge.Id))">Show</button>
-                            <button class="btn btn-sm btn-primary" @onclick="(() => EditHero(judge.Id))">Edit</button>
+                            <button class="btn btn-sm btn-warning" @onclick="(() => ShowJudge(judge.Id))">Show</button>
+                            <button class="btn btn-sm btn-primary" @onclick="(() => EditJudge(judge.Id))">Edit</button>
+                            <button class="btn btn-sm btn-danger" @onclick="(() => DeleteJudge(judge.Id))">Delete</button>
                         </td>
                     </tr>
                 }
@@ -50,14 +51,18 @@ else
     [CascadingParameter] // from Shared.JudgesContext.razor
     public List<Judge> Judges { get; set; }
 
-    void ShowHero(int id)
+    void ShowJudge(int id)
     {
         // JudgeInfo.razor
         NavigationManager.NavigateTo($"judges/{id}");
     }
-    void EditHero(int id)
+    void EditJudge(int id)
     {
         // JudgeInfo.razor
         NavigationManager.NavigateTo($"judges/{id}/edit");
+    }
+    void DeleteJudge(int id)
+    {
+        JudgeService.DeleteJudge(id);
     }
 }

@@ -28,6 +28,14 @@ namespace BlazorApp.Client.Services
             return Judges;
         }
 
+        public async Task<List<Judge>> DeleteJudge(int id)
+        {
+            var result = await _httpClient.DeleteAsync($"api/judge/{id}");
+            Judges = await result.Content.ReadFromJsonAsync<List<Judge>>();
+            OnChange.Invoke();
+            return Judges;
+        }
+
         public async Task<Judge> GetJudge(int id)
         {
             return await _httpClient.GetFromJsonAsync<Judge>($"api/judge/{id}");
