@@ -1,0 +1,17 @@
+﻿body {
+    line-height: 1.625;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+::deep h1, ::deep h2, ::deep h3, ::deep h4, ::deep h5, ::deep h6 {
+    font-family: starling, serif;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+@media screen and (min-width: 720px) {
+    ::deep h1 {
+        font-size: 2.625rem;
+    }
+}
+

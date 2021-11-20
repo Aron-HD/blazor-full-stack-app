@@ -1,0 +1,173 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url("https://p.typekit.net/p.css?s=1&k=dwj5fqn&ht=tk&f=31342.31343.31344.31345.31348.31349&a=13239853&app=typekit&e=css");
+
+@font-face {
+    font-family: "starling";
+    src: url("https://use.typekit.net/af/7ced03/00000000000000003b9ae8bd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/7ced03/00000000000000003b9ae8bd/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/7ced03/00000000000000003b9ae8bd/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "starling";
+    src: url("https://use.typekit.net/af/af631a/00000000000000003b9ae8be/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/af631a/00000000000000003b9ae8be/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/af631a/00000000000000003b9ae8be/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "starling";
+    src: url("https://use.typekit.net/af/80ca57/00000000000000003b9ae8bf/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/80ca57/00000000000000003b9ae8bf/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/80ca57/00000000000000003b9ae8bf/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "starling";
+    src: url("https://use.typekit.net/af/5c0933/00000000000000003b9ae8c0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/5c0933/00000000000000003b9ae8c0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/5c0933/00000000000000003b9ae8c0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "starling";
+    src: url("https://use.typekit.net/af/ac06c0/00000000000000003b9ae8c3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/ac06c0/00000000000000003b9ae8c3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/ac06c0/00000000000000003b9ae8c3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "starling";
+    src: url("https://use.typekit.net/af/8d4c2c/00000000000000003b9ae8c4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff2"),url("https://use.typekit.net/af/8d4c2c/00000000000000003b9ae8c4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff"),url("https://use.typekit.net/af/8d4c2c/00000000000000003b9ae8c4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("opentype");
+    font-display: auto;
+    font-style: italic;
+    font-weight: 900;
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+/* Card Tags */
+
+.tag {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .03125rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: white;
+}
+
+/* Section Title */
+
+.section-title-text {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: .0625rem rgba(0,0,0,.65) solid;
+}
+
+.section-title, .section-title-text {
+    background-color: rgba(0,0,0,.03);
+}
+
+    .section-title-text.awards-wea {
+        background-color: #afb0f8;
+    }
+
+/*Container wide*/
+
+.container-wide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.padding-t-biggest {
+    padding-top: 2rem;
+}
+
+@media screen and (min-width:720px) {
+    .container-wide {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .section-splash .container-wide {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .padding-t-biggest {
+        padding-top: 4rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .section-splash .container-wide {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .container-wide {
+        max-width: 1560px;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .padding-t-biggest {
+        padding-top: 5.625rem;
+    }
+}

@@ -1,0 +1,45 @@
+﻿@page "/judges/{id:int}"
+@inject IJudgeService JudgeService
+
+<h1>@judge.FullName</h1>
+<div class="judge-info">
+    <div class="card my-color" style="width: 30rem;">
+        @if (judge.Headshot != null)
+        {
+            <img class="card-img-top" src=@judge.Headshot alt=@judge.FullName />
+        }
+        <div class="card-body my-color">
+            <h4 class="card-title">@judge.FullName</h4>
+            @if (judge.Chair)
+            {
+                <p class="badge badge-warning">CHAIR</p>
+                <br />
+                <span class="card-subtitle mb-2 tag">Chair of Judges for @judge.Category</span>
+                <br />
+            }
+            else if (judge.Category != null)
+            {
+                <span class="card-subtitle mb-2 tag">@judge.Category</span>
+                <br />
+            }
+            <span class="card-subtitle mb-2 tag">@judge.Role, @judge.Company</span>
+            <p></p>
+            @if (judge.Bio != null)
+            {
+                <p class="card-text">@judge.Bio</p>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    // create a Judge Model and populate it by Id
+    Judge judge { get; set; } = new();
+    protected override async Task OnInitializedAsync()
+    {
+        judge = await JudgeService.GetJudge(Id);
+    }
+}

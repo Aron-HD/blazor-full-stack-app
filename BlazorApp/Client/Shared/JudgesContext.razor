@@ -1,0 +1,25 @@
+﻿@inject IJudgeService JudgeService
+@implements IDisposable 
+
+<CascadingValue Value="this">
+    <CascadingValue Value="@judges">
+        @ChildContent
+    </CascadingValue>
+</CascadingValue>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+    // Create a list of judges and fill it with an async req to api endpoint in service
+    List<Judge> judges = new();
+    protected override async Task OnInitializedAsync()
+    {
+        judges = await JudgeService.GetJudges();
+        JudgeService.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        JudgeService.OnChange -= StateHasChanged;
+    }
+}

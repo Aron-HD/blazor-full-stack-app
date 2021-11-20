@@ -1,0 +1,59 @@
+﻿@inject IJudgeService JudgeService
+@inject IJSRuntime JSRuntime
+
+<h3>@Title</h3>
+
+<EditForm Model="EditJudge" OnSubmit="handleSubmit">
+    <div class="input-group mb-3">
+        <InputText @bind-Value="EditJudge.FirstName" class="form-control" placeholder="First Name" />
+    </div>
+    <div class="input-group mb-3">
+        <InputText @bind-Value="EditJudge.LastName" class="form-control" placeholder="Last Name" />
+    </div>
+    <div class="input-group mb-3">
+        <InputText @bind-Value="EditJudge.Role" class="form-control" placeholder="Role" />
+    </div>
+    <div class="input-group mb-3">
+        <InputText @bind-Value="EditJudge.Company" class="form-control" placeholder="Company" />
+    </div>
+    <div class="input-group mb-3">
+        <InputText @bind-Value="EditJudge.Headshot" class="form-control" placeholder="https://cdn.warc.com/image.jpg" />
+    </div>
+    <div class="input-group mb-3">
+        <InputText @bind-Value="EditJudge.Bio" class="form-control" placeholder="Bio" />
+    </div>
+    <div class="input-group mb-3">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="chairCheck" @bind="EditJudge.Chair" />
+            <label class="form-check-label" for="chairCheck">
+                Chair?
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-warning">Submit</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    // Model for Edit Form
+    [Parameter]
+    public Judge EditJudge { get; set; } = new();
+
+
+    async void handleSubmit()
+    {
+        Console.WriteLine("Submit was called");
+        JSRuntime.InvokeVoidAsync("console.log", EditJudge);
+        if (EditJudge.Id == 0)
+        {
+            await JudgeService.CreateJudge(EditJudge);
+        }
+        else
+        {
+            await JudgeService.ReplaceJudge(EditJudge, EditJudge.Id);
+        }
+
+    }
+}

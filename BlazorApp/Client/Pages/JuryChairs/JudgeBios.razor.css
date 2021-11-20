@@ -1,0 +1,105 @@
+﻿/* Tiles */
+
+.tiles-people {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+    .tiles-people .tile:nth-of-type(5n+1) .person-main {
+        background-color: #4441f7;
+    }
+
+    .tiles-people .tile:nth-of-type(5n+2) .person-main {
+        background-color: #f47b56;
+        color: #232220;
+    }
+
+    .tiles-people .tile:nth-of-type(5n+2) .person-bio .tag, .tiles-people .tile:nth-of-type(5n+2) .person-bio .testimonial-source, .tiles-people .tile:nth-of-type(5n+2) .person-bio .label-includes {
+        color: #232220;
+    }
+
+    .tiles-people .tile:nth-of-type(5n+3) .person-main {
+        background-color: #afb0f8;
+        color: #232220;
+    }
+
+    .tiles-people .tile:nth-of-type(5n+3) .person-bio .tag, .tiles-people .tile:nth-of-type(5n+3) .person-bio .testimonial-source, .tiles-people .tile:nth-of-type(5n+3) .person-bio .label-includes {
+        color: #232220;
+    }
+
+    .tiles-people .tile:nth-of-type(5n+4) .person-main {
+        background-color: #f5c04c;
+        color: #232220;
+    }
+
+    .tiles-people .tile:nth-of-type(5n+4) .person-bio .tag, .tiles-people .tile:nth-of-type(5n+4) .person-bio .testimonial-source, .tiles-people .tile:nth-of-type(5n+4) .person-bio .label-includes {
+        color: #232220;
+    }
+
+    .tiles-people .tile:nth-of-type(5n) .person-main {
+        background-color: #17756c;
+    }
+
+@media screen and (min-width:576px) {
+    .tiles-people .tile {
+        display: grid;
+        grid-template-columns: calc(100% - 10rem) 12.5rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .tiles-people {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+/* Tile Content */
+
+.person-main {
+    color: #fff;
+    padding: 1.5rem 1.5rem 4rem;
+}
+
+    .person-main::after {
+        clear: both;
+    }
+
+.person-bio .tag, .person-bio .testimonial-source, .person-bio .label-includes {
+    color: rgba(255,255,255,.85);
+}
+
+.person-image {
+    width: 60%;
+    margin: -3.5rem 1.5rem 0;
+    float: right;
+}
+
+
+@media screen and (min-width:576px) {
+    .person-main {
+        padding: 2rem;
+        display: grid;
+        grid-auto-rows: min-content 1fr;
+    }
+
+    .person-bio {
+        padding-right: 2rem;
+    }
+
+    .person-name {
+        align-self: start;
+    }
+
+    .person-image {
+        margin: 2.5rem 0 1rem -2.5rem;
+        float: none;
+    }
+
+        .person-image img {
+            width: auto;
+            height: 12.5rem;
+            max-width: none;
+        }
+}

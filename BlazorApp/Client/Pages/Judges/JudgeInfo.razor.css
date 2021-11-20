@@ -1,0 +1,20 @@
+﻿.judge-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    line-height: 1.625;
+}
+
+.judge-info h1, .judge-info h2, .judge-info h3, .judge-info h4, .judge-info h5, .judge-info h6 {
+    font-family: starling, serif;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.my-color {
+    background-color: #17756c;
+    color: white;
+}

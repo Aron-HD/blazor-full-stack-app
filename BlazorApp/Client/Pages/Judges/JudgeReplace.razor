@@ -1,0 +1,19 @@
+﻿@page "/judges/{id:int}/edit"
+@inject IJudgeService JudgeService
+
+<h3>Judge Replace</h3>
+<div class="container mt-5 mb-5">
+    <JudgeEditForm Title="Edit Judge" EditJudge=@judge />
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    // create a Judge Model and fill it with
+    Judge judge { get; set; } = new();
+    protected override async Task OnInitializedAsync()
+    {
+        judge = await JudgeService.GetJudge(Id);
+    }
+}
