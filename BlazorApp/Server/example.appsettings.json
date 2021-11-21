@@ -1,0 +1,13 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnectionString": "Server=<your-db-server-name>; Initial Catalog=<your-db-name>; User ID=<user-name>; Password=<password>; Trusted_Connection=true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
